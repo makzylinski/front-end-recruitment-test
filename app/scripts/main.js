@@ -76,4 +76,14 @@
   }
 
   // Your custom JavaScript goes here
+
+  // Task 1 
+  const baconButton = document.querySelector('button');
+  const baconImage = document.querySelector('img');
+  const baconSection = document.querySelectorAll('#overview section:nth-child(2)');
+
+  baconButton.addEventListener('click', e => {
+    e.preventDefault();
+    baconSection[0].appendChild(baconImage.cloneNode(true))
+  })
 })();
