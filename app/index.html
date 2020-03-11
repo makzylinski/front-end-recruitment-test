@@ -64,6 +64,7 @@
         </div>
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
           <a href="#overview" class="mdl-layout__tab is-active">Overview</a>
+          <a href="#checkout" class="mdl-layout__tab">Checkout</a>
           <a href="#features" class="mdl-layout__tab">Features</a>
           <a href="#features" class="mdl-layout__tab">Details</a>
           <a href="#features" class="mdl-layout__tab">Technology</a>
@@ -171,6 +172,115 @@
               <h5>Lorem ipsum dolor sit amet</h5>
               Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
             </div>
+          </section>
+        </div>
+        <div class="mdl-layout__tab-panel" id="checkout">
+          <section class="section--center mdl-grid mdl-grid--no-spacing">
+              <div class="mdl-cell mdl-cell--12-col mdl-grid">
+                <div class="mdl-cell mdl-cell--8-col">
+                  <section id="personal-information">
+                    <div class="personal-information-label">
+                        <div class="personal-information-number">1</div>
+                        <div class="personal-information-info">Personal information</div>
+                    </div>
+                  </section>
+                  <div class="mdl-cell mdl-cell--12-col mdl-grid">
+                      <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-textfield mdl-js-textfield">
+                          <label class="" for="first-name">First Name</label>
+                          <input class="mdl-textfield__input" type="text" id="first-name" placeholder="Elon">
+                        </div>
+                      </div>
+                      <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-textfield mdl-js-textfield">
+                          <label class="" for="last-name">Last name</label>
+                          <input class="mdl-textfield__input" type="text" id="last-name" placeholder="Musk">
+                        </div>
+                      </div>
+                  </div>
+                  <div class="mdl-cell mdl-cell--12-col mdl-grid">
+                    <div class="mdl-textfield mdl-js-textfield" style="width: 100%">
+                      <label class="" for="first-name">Email</label>
+                      <input class="mdl-textfield__input" type="text" id="first-name" placeholder="elon@spacex.com">
+                    </div>
+                  </div>
+                  <div class="mdl-cell mdl-cell--12-col mdl-grid">
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-textfield mdl-js-textfield getmdl-select">
+                            <label for="sample1" class="">Country</label>
+                            <input type="text" value="" class="mdl-textfield__input" id="sample1" readonly>
+                            <input type="hidden" value="" name="sample1">
+                            <ul for="sample1" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                                <li class="mdl-menu__item" data-val="DEU">Germany</li>
+                                <li class="mdl-menu__item" data-val="BLR">Belarus</li>
+                                <li class="mdl-menu__item" data-val="RUS">Russia</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col">
+                      <div class="mdl-textfield mdl-js-textfield">
+                        <label class="" for="postal-code">Postal code</label>
+                        <input class="mdl-textfield__input" type="text" id="postal-code" placeholder="10001">
+                      </div>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--12-col mdl-grid">
+                  <div class="mdl-textfield mdl-js-textfield" style="width: 100%">
+                    <label class="" for="phone-number">Phone number</label>
+                    <input class="mdl-textfield__input" type="text" id="phone-number" placeholder="(212) 692-92-93">
+                  </div>
+                </div>
+
+                <section id="payment-information">
+                  <div class="payment-information-label">
+                      <div class="payment-information-number">2</div>
+                      <div class="payment-information-info">Paymenst details</div>
+                  </div>
+                </section>
+                <div class="mdl-cell mdl-cell--12-col mdl-grid">
+                  <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-textfield mdl-js-textfield">
+                      <label class="" for="credit-card">Credit Card Number</label>
+                      <input class="mdl-textfield__input" type="text" id="credit-card" placeholder="0000 - 0000 - 0000 - 0000">
+                    </div>
+                  </div>
+              </div>
+              <div class="mdl-cell mdl-cell--12-col mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col">
+                  <div class="mdl-textfield mdl-js-textfield">
+                    <label class="" for="security-code">Security code</label>
+                    <input class="mdl-textfield__input" type="password" id="security-code" placeholder="***">
+                  </div>
+                </div>
+                <div class="mdl-cell mdl-cell--6-col">
+                  <div class="mdl-textfield mdl-js-textfield">
+                    <label class="" for="expiration-date">Expiration date</label>
+                    <input class="mdl-textfield__input" type="text" id="expiration-date" placeholder="MM / YY">
+                  </div>
+                </div>
+            </div>
+              </div>
+                
+                <!-- ponizej druga kolumna  -->
+                <div class="mdl-cell mdl-cell--4-col">
+                  <div class="your-order-container" style="border: 1px dashed grey;">
+                      <div class="order-text">Your order</div>
+                      <div class="your-order" style="border-bottom: 1px dashed grey;">
+                        <span class="order-item">Apple Watch Sport</span> <span class="order-price">$ 580</span>
+                        <span class="order-item">Modern Buckle</span> <span class="order-price">$ 380</span>
+                      </div>
+                      <div class="total" style="border-bottom: 1px dashed grey;">
+                        <div class="total-purchases">
+                          <span class="total-item">Total purchases</span> <span class="total-price">$ 960</span>
+                          <span class="total-item">Estimated tax</span> <span class="total-price">$ 0</span>
+                        </div>
+                      </div>
+                      <div class="overall">
+                        <span>Total</span> <span>$ 960</span>
+                      </div>
+                  </div>
+                </div>
+              </div>
           </section>
         </div>
         <div class="mdl-layout__tab-panel" id="features">
