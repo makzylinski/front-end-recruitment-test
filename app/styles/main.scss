@@ -211,3 +211,135 @@ html, body {
 .mdl-demo .mdl-menu__container {
   z-index: 99;
 }
+
+#checkout {
+  background-color: #f2f2f2 !important;
+}
+
+#personal-information {
+  margin-bottom: 25px;
+}
+
+#payment-information {
+  margin: 25px 0;
+}
+
+.personal-information-number, .payment-information-number {
+  font-size: 27px;
+  font-weight: 700;
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+}
+
+.personal-information-info, .payment-information-info {
+  font-size: 27px;
+  font-weight: 700;
+  display: inline-block;
+  color: #000;
+}
+
+.checkout_form {
+  background: white;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  height: 49px;
+  border-radius: 4px;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: 0 2px lightgrey;
+
+  .input-container {
+    margin: 0 0 0 15px !important;
+    padding: 0 !important;
+  }
+
+  .form-label {
+    padding: 8px 0 0 8px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .form-input {
+    margin: 0;
+    padding: 0 0 4px 8px;
+    border-bottom: none;
+  }
+
+  .purchase-button {
+    height: 100%; 
+    width: 100%;
+    background-color: limegreen;
+    color: white;
+  }
+}
+.form-row {
+  margin: 0 !important;
+  padding: 0 !important; 
+}
+#order-deatils {
+
+  #order-head {
+    margin: 0;
+    font-weight: 700;
+    color: #000;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+
+  .your-order-container {
+    background-color: #fff;
+    margin-top: 55px;
+    padding: 5px;
+    
+    .your-order-content {
+      border: 1px dashed grey;
+      padding: 10px;
+
+      .border-bottom {
+        border-bottom: 1px dashed grey;
+      }
+
+      .order-text h6 {
+        color: #202020;
+        font-weight: 700;
+        font-size: 16px;
+      }
+    }
+
+    .order-item {
+      color: #000;
+      display: inline-block;
+      margin: 5px 0;
+      min-width: 60%;
+    }
+
+    .order-price {
+      float: right;
+    }
+
+    .overall {
+      font-weight: 700;
+      color: #000;
+      margin: 15px 0 25px 0;
+
+      .overall-text {
+        
+      }
+  
+      .overall-money {
+        font-size: 25px;
+        float: right;
+      }
+    }
+
+    
+  }
+}
