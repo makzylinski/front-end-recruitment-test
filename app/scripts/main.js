@@ -87,3 +87,117 @@
     baconSection[0].appendChild(baconImage.cloneNode(true))
   })
 })();
+
+// Task 3 
+const form = document.getElementById('form');
+
+
+document.getElementById('first-name').addEventListener('keyup', () => {
+  const regex = new RegExp(/^[a-zA-z]+$/);
+  const name = document.getElementById('first-name');
+  if(regex.test(name.value) && name.value.length >= 2) {
+    document.querySelector('#nameError').classList.add('legitInput')
+    checkValid();
+  } else {
+    document.querySelector('#nameError').classList.remove('legitInput')
+    document.querySelector('#nameError').classList.add('errorInput')
+  }
+})
+
+document.getElementById('last-name').addEventListener('keyup', () => {
+  const regex = new RegExp(/^[a-zA-z]+$/);
+  const lastname = document.getElementById('last-name');
+  if(regex.test(lastname.value) && lastname.value.length >= 2) {
+    document.querySelector('#lastNameError').classList.add('legitInput')
+    checkValid();
+  } else {
+    document.querySelector('#lastNameError').classList.remove('legitInput')
+    document.querySelector('#lastNameError').classList.add('errorInput')
+  }
+})
+
+document.getElementById('email').addEventListener('keyup', () => {
+  const regex = new RegExp(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+  const email = document.getElementById('email');
+  if(regex.test(email.value) && email.value.length >= 2) {
+    document.querySelector('#emailError').classList.add('legitInput')
+    checkValid();
+  } else {
+    document.querySelector('#emailError').classList.remove('legitInput')
+    document.querySelector('#emailError').classList.add('errorInput')
+  }
+})
+
+document.getElementById('postal-code').addEventListener('keyup', () => {
+  const regex = new RegExp(/^[0-9]+$/);
+  const postalCode = document.getElementById('postal-code');
+  if(regex.test(postalCode.value) && postalCode.value.length === 5) {
+    document.querySelector('#postalError').classList.add('legitInput')
+    checkValid();
+  } else {
+    document.querySelector('#postalError').classList.remove('legitInput')
+    document.querySelector('#postalError').classList.add('errorInput')
+  }
+})
+
+document.getElementById('phone-number').addEventListener('keyup', () => {
+  const regex = new RegExp(/^[+]?(\d{1,2})?[\s.-]?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{3}$/);
+  const phoneNumber = document.getElementById('phone-number');
+  if(regex.test(phoneNumber.value)) {
+    document.querySelector('#numberError').classList.add('legitInput')
+    checkValid();
+  } else {
+    document.querySelector('#numberError').classList.remove('legitInput')
+    document.querySelector('#numberError').classList.add('errorInput')
+  }
+})
+
+document.getElementById('credit-card').addEventListener('keyup', () => {
+  const regex = new RegExp(/^\b\d{4}[ -]?\d{4}[ -]?\d{4}[ -]?\d{4}\b$/);
+  const creditCard = document.getElementById('credit-card');
+  if(regex.test(creditCard.value)) {
+    document.querySelector('#cardError').classList.add('legitInput')
+    checkValid();
+  } else {
+    document.querySelector('#cardError').classList.remove('legitInput')
+    document.querySelector('#cardError').classList.add('errorInput')
+  }
+})
+
+document.getElementById('security-code').addEventListener('keyup', (e) => {
+  const security = document.getElementById('security-code');
+  if(e.target.value.length === 3  && typeof e.target.value.length === 'number') {
+    document.querySelector('#securityError').classList.add('legitInput')
+    checkValid();
+  } else {
+    document.querySelector('#securityError').classList.remove('legitInput')
+    document.querySelector('#securityError').classList.add('errorInput')
+  }
+})
+
+document.getElementById('expiration-date').addEventListener('keyup', () => {
+  const regex = new RegExp(/^(0[1-9]|1[0-2])\/[0-9]{2}$/);
+  const expDate = document.getElementById('expiration-date');
+  if(regex.test(expDate.value)) {
+    document.querySelector('#expError').classList.add('legitInput')
+    checkValid();
+  } else {
+    document.querySelector('#expError').classList.remove('legitInput')
+    document.querySelector('#expError').classList.add('errorInput')
+  }
+})
+
+function checkValid()
+{
+    const f = document.forms['form'].elements;
+    let cansubmit = true;
+
+    for (var i = 0; i < f.length-1; i++) {
+        if (f[i].value.length == 0) cansubmit = false;
+        else {
+          document.querySelector('.purchase-button').disabled = 'disabled';
+      }
+    }
+
+    document.querySelector('.purchase-button').disabled = !cansubmit;
+}

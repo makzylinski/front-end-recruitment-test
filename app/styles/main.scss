@@ -273,6 +273,29 @@ html, body {
     border-bottom: none;
   }
 
+  .errorInput {
+    color: red;
+    display: inline-block;
+  }
+
+  .legitInput {
+    display: none;
+  }
+
+  #country {
+    outline: none;
+    display: block;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 60%;
+    border: none;
+    background-color: #fff;
+    padding: 0 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: inherit;
+  }
+
   .purchase-button {
     height: 100%; 
     width: 100%;
@@ -329,17 +352,11 @@ html, body {
       font-weight: 700;
       color: #000;
       margin: 15px 0 25px 0;
-
-      .overall-text {
-        
-      }
   
       .overall-money {
         font-size: 25px;
         float: right;
       }
     }
-
-    
   }
 }

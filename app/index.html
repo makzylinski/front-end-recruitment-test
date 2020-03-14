@@ -38,6 +38,8 @@
 
     <!-- Material Design icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
 
     <!-- Material Design Lite page styles:
@@ -187,98 +189,108 @@
                   </div>
                 </section>
                 <section id="form-info">
-                  <div class="mdl-cell mdl-cell--12-col mdl-grid form-row">
-                    <div class="mdl-cell mdl-cell--6-col input-container">
-                      <div class="mdl-textfield mdl-js-textfield checkout_form" style="width: 100%">
-                        <label class="form-label" for="first-name">First Name</label>
-                        <input class="mdl-textfield__input form-input" type="text" placeholder="Elon">
+                  <form action="/" id="form">
+                    <div class="mdl-cell mdl-cell--12-col mdl-grid form-row">
+                        <div class="mdl-cell mdl-cell--6-col input-container">
+                          <div class="mdl-textfield mdl-js-textfield checkout_form" style="width: 100%">
+                            <label class="form-label" for="first-name">First Name</label>
+                            <input class="mdl-textfield__input form-input" name="first-name" id="first-name" type="text" placeholder="Elon" required>
+                            <p id="nameError" class="legitInput">Name cannot contain digits and must be at least 2 characters long.</p>
+                          </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col input-container">
+                          <div class="mdl-textfield mdl-js-textfield checkout_form">
+                            <label class="form-label" for="last-name">Last name</label>
+                            <input class="mdl-textfield__input form-input" name="last-name" id="last-name" type="text" placeholder="Musk" required>
+                            <p id=lastNameError class="legitInput">Last name cannot contain digits and must be at least 2 characters long.</p>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="mdl-cell mdl-cell--6-col input-container">
-                      <div class="mdl-textfield mdl-js-textfield checkout_form">
-                        <label class="form-label" for="last-name">Last name</label>
-                        <input class="mdl-textfield__input form-input" type="text" placeholder="Musk">
+    
+                      <div class="mdl-cell mdl-cell--12-col mdl-grid form-row">
+                        <div class="mdl-cell mdl-cell--12-col input-container">
+                          <div class="mdl-textfield mdl-js-textfield checkout_form" style="width: 100%">
+                            <label class="form-label" for="email">Email</label>
+                            <input class="mdl-textfield__input form-input" name="email" id="email" type="text" placeholder="elon@spacex.com" required>
+                            <p id="emailError" class="legitInput">Please, provide valid email.</p>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-
-                  <div class="mdl-cell mdl-cell--12-col mdl-grid form-row">
-                    <div class="mdl-cell mdl-cell--12-col input-container">
-                      <div class="mdl-textfield mdl-js-textfield checkout_form" style="width: 100%">
-                        <label class="form-label" for="first-name">Email</label>
-                        <input class="mdl-textfield__input form-input" type="text" placeholder="elon@spacex.com">
+    
+                      <div class="mdl-cell mdl-cell--12-col mdl-grid form-row">
+                        <div class="mdl-cell mdl-cell--6-col input-container">
+                          <div class="mdl-textfield mdl-js-textfield getmdl-select checkout_form">
+                            <label for="country" class="form-label">Country</label>
+                            <select name="country" id="country" required> 
+                              <option value="PL">Poland</option>
+                              <option value="DE">Germany</option>
+                              <option value="FR">France</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col input-container">
+                          <div class="mdl-textfield mdl-js-textfield checkout_form">
+                            <label class="form-label" for="postal-code">Postal code</label>
+                            <input class="mdl-textfield__input form-input" name="postal-code" id="postal-code" type="number" placeholder="10001" required>
+                            <p id="postalError" class="legitInput">Zip code containst 5 digits.</p>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-
-                  <div class="mdl-cell mdl-cell--12-col mdl-grid form-row">
-                    <div class="mdl-cell mdl-cell--6-col input-container">
-                      <div class="mdl-textfield mdl-js-textfield getmdl-select checkout_form">
-                        <label for="country" class="form-label">Country</label>
-                        <input type="text" value="" class="mdl-textfield__input form-input" id="country" readonly>
-                        <input type="hidden" value="" name="country">
-                          <ul for="country" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-                            <li class="mdl-menu__item" data-val="DEU">Germany</li>
-                            <li class="mdl-menu__item" data-val="BLR">Belarus</li>
-                            <li class="mdl-menu__item" data-val="RUS">Russia</li>
-                          </ul>
+    
+                      <div class="mdl-cell mdl-cell--12-col mdl-grid form-row">
+                        <div class="mdl-cell mdl-cell--12-col input-container">
+                          <div class="mdl-textfield mdl-js-textfield checkout_form" style="width: 100%">
+                            <label class="form-label" for="phone-number">Phone number</label>
+                            <input class="mdl-textfield__input form-input" name="phone-number" id="phone-number" type="text" placeholder="(212) 692-92-93" required>
+                            <p id="numberError" class="legitInput">Please, provide valid phone number.</p>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="mdl-cell mdl-cell--6-col input-container">
-                      <div class="mdl-textfield mdl-js-textfield checkout_form">
-                        <label class="form-label" for="postal-code">Postal code</label>
-                        <input class="mdl-textfield__input form-input" type="text" placeholder="10001">
+    
+                      <section id="payment-information">
+                        <div class="payment-information-label">
+                          <div class="payment-information-number">2</div>
+                          <div class="payment-information-info">Paymenst details</div>
+                          <i class=" material-icons">lock</i>
+                        </div>
+                      </section>
+    
+                      <div class="mdl-cell mdl-cell--12-col mdl-grid form-row">
+                        <div class="mdl-cell mdl-cell--12-col input-container">
+                          <div class="mdl-textfield mdl-js-textfield checkout_form">
+                            <label class="form-label" for="credit-card">Credit Card Number</label>
+                            <input class="mdl-textfield__input form-input" name="credit-card" id="credit-card" type="text" placeholder="0000 - 0000 - 0000 - 0000" required>
+                            <p id="cardError" class="legitInput">Please, provide valid Card number.</p>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-
-                  <div class="mdl-cell mdl-cell--12-col mdl-grid form-row">
-                    <div class="mdl-cell mdl-cell--12-col input-container">
-                      <div class="mdl-textfield mdl-js-textfield checkout_form" style="width: 100%">
-                        <label class="form-label" for="phone-number">Phone number</label>
-                        <input class="mdl-textfield__input form-input" type="text" placeholder="(212) 692-92-93">
+    
+                      <div class="mdl-cell mdl-cell--12-col mdl-grid form-row">
+                        <div class="mdl-cell mdl-cell--6-col input-container">
+                          <div class="mdl-textfield mdl-js-textfield checkout_form">
+                            <label class="form-label" for="security-code">Security code</label>
+                            <input class="mdl-textfield__input form-input" name="security-code" id="security-code" type="password" placeholder="***" required>
+                            <p id="securityError" class="legitInput">Security code contains 3 digits.</p>
+                          </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col input-container">
+                          <div class="mdl-textfield mdl-js-textfield checkout_form">
+                            <label class="form-label" for="expiration-date">Expiration date</label>
+                            <input class="mdl-textfield__input form-input" name="expiration-date" id="expiration-date" type="text" placeholder="MM / YY" required>
+                            <p id="expError" class="legitInput">Please, provide valid date in format: MM / YY.</p>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-
-                  <section id="payment-information">
-                    <div class="payment-information-label">
-                      <div class="payment-information-number">2</div>
-                      <div class="payment-information-info">Paymenst details</div>
-                    </div>
-                  </section>
-
-                  <div class="mdl-cell mdl-cell--12-col mdl-grid form-row">
-                    <div class="mdl-cell mdl-cell--12-col input-container">
-                      <div class="mdl-textfield mdl-js-textfield checkout_form">
-                        <label class="form-label" for="credit-card">Credit Card Number</label>
-                        <input class="mdl-textfield__input form-input" type="text" placeholder="0000 - 0000 - 0000 - 0000">
+    
+                      <div class="mdl-cell mdl-cell--12-col mdl-grid form-row">
+                        <div class="mdl-cell mdl-cell--6-col checkout_form">
+                          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect purchase-button" type="submit" disabled="disabled">
+                            <i class=" material-icons">shopping_cart</i>
+                            Complete Purchase
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-
-                  <div class="mdl-cell mdl-cell--12-col mdl-grid form-row">
-                    <div class="mdl-cell mdl-cell--6-col input-container">
-                      <div class="mdl-textfield mdl-js-textfield checkout_form">
-                        <label class="form-label" for="security-code">Security code</label>
-                        <input class="mdl-textfield__input form-input" type="password" placeholder="***">
-                      </div>
-                    </div>
-                    <div class="mdl-cell mdl-cell--6-col input-container">
-                      <div class="mdl-textfield mdl-js-textfield checkout_form">
-                        <label class="form-label" for="expiration-date">Expiration date</label>
-                        <input class="mdl-textfield__input form-input" type="text" placeholder="MM / YY">
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="mdl-cell mdl-cell--12-col mdl-grid form-row">
-                    <div class="mdl-cell mdl-cell--6-col checkout_form">
-                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect purchase-button">
-                         Complete Purchase
-                      </button>
-                    </div>
-                  </div>
+                  </form>
                 </section>
               </div>
 
